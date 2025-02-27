@@ -70,7 +70,7 @@ class SimuladorGUI:
         
         """NUEVO"""
         ttk.Label(abajo_frame, text="                                               ").grid(row=0, column=0, padx=20)
-        ttk.Label(abajo_frame, text = "Listos").grid(row=0, column=1, padx=10)
+        ttk.Label(abajo_frame, text = "Procesos Listos").grid(row=0, column=1, padx=10)
         #self. listos = tk.Listbox(abajo_frame, height=3)
         #self.listos.grid(row=1, column=1, pady=2)  # Reducido el espacio vertical
 
@@ -106,7 +106,7 @@ class SimuladorGUI:
         self.tiempoRest_label = ttk.Label(abajo_frame, textvariable= self.tiempo_rest, font=("Arial", 10, "bold"))
         self.tiempoRest_label.grid(row=1, column=5)
         
-        ttk.Label(proceso_frame1, text="No Admitidos").grid(row=0, column=0)
+        ttk.Label(proceso_frame1, text="Procesos Nuevos").grid(row=0, column=0)
 
         self.q_restante = tk.StringVar()
         self.q_restante.set('')
@@ -125,7 +125,7 @@ class SimuladorGUI:
         self.noAdmitidos.column("TA", width=10)
         self.noAdmitidos.column("TI", width=10)
 
-        ttk.Label(proceso_frame1, text="Nuevos").grid(row=11, column=0)
+        ttk.Label(proceso_frame1, text="Procesos Suspendidos").grid(row=11, column=0)
 
         #self.nuevos = tk.Listbox(proceso_frame1, height=5)
         #self.nuevos.grid(row=12, column=0, pady=5)
@@ -143,7 +143,7 @@ class SimuladorGUI:
         self.nuevos.column("TI", width=30)
         """NUEVO"""
 
-        ttk.Label(proceso_frame, text="Procesos Terminados:").grid(row=0, column=0)
+        ttk.Label(proceso_frame, text="Procesos Terminados").grid(row=0, column=0)
         #self.terminados = tk.Listbox(proceso_frame, height=10)
         #self.terminados.grid(row=1, column=0, pady=5)
         self.terminados = ttk.Treeview(proceso_frame, columns=("ID", "TR", "TE"), show='headings', height=10)
